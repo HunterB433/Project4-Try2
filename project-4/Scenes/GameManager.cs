@@ -12,8 +12,10 @@ public partial class GameManager : Node
 		GD.Print($"Bottle collected! ({BottlesCollected}/{BottleGoal})");
 
 		if (BottlesCollected >= BottleGoal)
+		{
 			BottlesCollected = 0;
 			WinGame();
+		}
 	}
 	
 	public static void ZeroBottles()
