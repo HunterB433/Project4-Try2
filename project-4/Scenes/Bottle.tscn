@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdidu2xk01w72"]
+
+[ext_resource type="Texture2D" uid="uid://diq588g3pynwn" path="res://Sources/sprites/YellowBottle.png" id="1_5jbl6"]
+[ext_resource type="Script" uid="uid://b7bubkibvm2re" path="res://Scenes/Bottle.cs" id="2_cnbgp"]
+[ext_resource type="Texture2D" uid="uid://bygwfb2s4sahg" path="res://YellowBottle.png" id="2_d78q1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjfrc"]
+size = Vector2(8, 14)
+
+[node name="Bottle" type="Node2D"]
+script = ExtResource("2_cnbgp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5jbl6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qjfrc")
+
+[node name="Partics" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 50
+texture = ExtResource("2_d78q1")
+lifetime = 5.0
+one_shot = true
+speed_scale = 2.0
+explosiveness = 0.5
+emission_shape = 4
+emission_points = PackedVector2Array(10, 0, -10, 0)
+emission_colors = PackedColorArray()
+direction = Vector2(1, 10)
+spread = 55.0
+gravity = Vector2(0, 0)
+angular_velocity_min = -720.0
+angular_velocity_max = 720.0
+orbit_velocity_max = 0.1
+scale_amount_min = 0.0
+scale_amount_max = 1.2
+hue_variation_min = 1.0
+hue_variation_max = 1.0

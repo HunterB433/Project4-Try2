@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cni8qgmgvcfr7"]
+
+[ext_resource type="Texture2D" uid="uid://c3gnlk6t88don" path="res://Sources/sprites/Loser.png" id="1_qdjbu"]
+[ext_resource type="Script" uid="uid://dh6jvw8ijy1df" path="res://Scenes/Button.cs" id="2_ldcug"]
+
+[node name="LoseScreen" type="Node2D"]
+
+[node name="Lose" type="Sprite2D" parent="."]
+position = Vector2(579, 331)
+scale = Vector2(3, 3.1153846)
+texture = ExtResource("1_qdjbu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 80
+text = "YOU LOSE"
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 856.0
+offset_top = 459.0
+offset_right = 1081.0
+offset_bottom = 534.0
+theme_override_font_sizes/font_size = 48
+text = "Try Again"
+script = ExtResource("2_ldcug")
+
+[connection signal="pressed" from="CanvasLayer/Button" to="CanvasLayer/Button" method="OnPressed"]
