@@ -5,7 +5,7 @@ You want to collect bottles (There are 3 on the map and you win after 3)
 
 You die if you fall in lava or get touched by one of the enemies (Flying Slimes)
 
-See gameplay video here ->
+See gameplay video here -> https://youtu.be/sLD-JcNyoGE
 
 This is how it satifies the requirements
 1) The world blocks, and backround are both tile sets
